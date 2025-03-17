@@ -38,7 +38,7 @@ mongoose
 app.use("/auth", userRouter);
 
 // ✅ Démarrer le serveur
-const PORT = process.env.PORT || 3001;
-app.listen(PORT, () => {
-  console.log(`🚀 Serveur démarré sur http://localhost:${PORT}`);
+const PORT = process.env.PORT || 3001; // Utilise le port fourni par Render
+app.listen(PORT, "0.0.0.0", () => {
+  console.log(`🚀 Serveur démarré sur le port ${PORT}`);
 });
